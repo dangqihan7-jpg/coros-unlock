@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "coros-unlock"
+version = "0.1.0"
+description = "Proximity-based Mac unlock with a COROS watch over Bluetooth LE"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "coros-unlock contributors" }]
+keywords = ["coros", "macos", "ble", "bluetooth", "proximity", "unlock"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS :: MacOS X",
+    "Topic :: Security",
+]
+dependencies = [
+    "bleak>=0.22",
+    "pyobjc-framework-Quartz>=9.0; sys_platform == 'darwin'",
+]
+
+[project.scripts]
+coros-unlock = "coros_unlock.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["coros_unlock*"]

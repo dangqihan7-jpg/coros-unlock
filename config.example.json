@@ -1,0 +1,11 @@
+{
+  "device_name": "COROS PACE 3",
+  "device_identifier": "",
+  "require_hr_service": false,
+  "present_after": 2,
+  "absent_after": 15.0,
+  "unlock_cooldown": 30.0,
+  "lock_when_away": true,
+  "rssi_threshold": -90,
+  "log_level": "INFO"
+}

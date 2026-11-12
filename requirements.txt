@@ -1,0 +1,3 @@
+bleak>=0.22
+# Only needed on macOS; pip understands the environment marker on all platforms.
+pyobjc-framework-Quartz>=9.0; sys_platform == "darwin"

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Reference copy. `coros-unlock install` generates a personalized version
+  (~/Library/LaunchAgents/com.corosunlock.daemon.plist) with the absolute
+  interpreter path of the venv you installed the package into.
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.corosunlock.daemon</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/ABSOLUTE/PATH/TO/.venv/bin/python</string>
+        <string>-m</string>
+        <string>coros_unlock</string>
+        <string>daemon</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/ABSOLUTE/PATH/TO/Library/Logs/coros-unlock.log</string>
+    <key>StandardErrorPath</key>
+    <string>/ABSOLUTE/PATH/TO/Library/Logs/coros-unlock.log</string>
+</dict>
+</plist>
